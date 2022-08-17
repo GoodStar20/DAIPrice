@@ -22,7 +22,6 @@ const App = () => {
       const response = await axios.get(
         'https://api.daiprice.org/v1/tokens/DAI/symbol',
       );
-      console.log(response);
       if (response.status === 200) {
         setPrice(response.data.priceUsd);
         setPercent(response.data.priceChangePercent);
